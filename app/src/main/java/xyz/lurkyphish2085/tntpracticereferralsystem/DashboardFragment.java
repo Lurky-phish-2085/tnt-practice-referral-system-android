@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 public class DashboardFragment extends Fragment implements View.OnClickListener {
+    // ToDo: Setup the recyclerview
 
     NavController navController;
     Button gotoInput;
