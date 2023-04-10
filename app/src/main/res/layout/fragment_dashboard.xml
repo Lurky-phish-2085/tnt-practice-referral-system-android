@@ -22,5 +22,9 @@
         android:layout_gravity="center_horizontal"
         android:text="GOTO INPUT"/>
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transaction_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/recyclerview_transaction_item"/>
 </LinearLayout>

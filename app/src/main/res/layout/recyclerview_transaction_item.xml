@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/transaction_amount_tv"
         android:text="Juan Dela Cruz"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
         <TextView
             android:id="@+id/transaction_date_tv"
@@ -25,6 +25,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="Jan 1 1970"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
 </RelativeLayout>

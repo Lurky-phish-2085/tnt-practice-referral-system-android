@@ -36,6 +36,11 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         return transactionList.size();
     }
 
+    void setTransactionList(List<Transaction> list) {
+        transactionList = list;
+        notifyDataSetChanged();
+    }
+
     class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView transactionAmount, transactionSource, transactionDate;
