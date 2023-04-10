@@ -53,8 +53,9 @@ public class InputFragment extends Fragment implements View.OnClickListener {
         if (id == addAmountBtn.getId()) {
             // ToDo: Logic to add amount to user
             Date date = new Date();
-            SimpleDateFormat format = new SimpleDateFormat("MM/dd/Y h:m:s a");
-            mainViewModel.insert(new Transaction("Bank transfer", 200, 1, format.format(date)));
+            SimpleDateFormat format = new SimpleDateFormat("MM/dd/y h:m:s a");
+            int userKey = getArguments().getInt("user-Key");
+            mainViewModel.insert(new Transaction("Bank transfer", 200, userKey, format.format(date)));
             navController.navigate(R.id.action_inputFragment_to_dashboardFragment);
         }
     }

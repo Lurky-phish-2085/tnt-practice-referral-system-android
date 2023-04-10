@@ -73,7 +73,10 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     public void onClick(View view) {
         int id = view.getId();
         if (id == gotoInput.getId()) {
-            navController.navigate(R.id.action_dashboardFragment_to_inputFragment);
+            // Todo: HARDCODED USERKEY
+            Bundle bundle = new Bundle();
+            bundle.putInt("user-Key", 1);
+            navController.navigate(R.id.action_dashboardFragment_to_inputFragment, bundle);
         }
     }
 }
