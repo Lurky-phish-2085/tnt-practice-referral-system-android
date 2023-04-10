@@ -12,10 +12,12 @@ public class Transaction {
     private String source;
     private double amount;
     private int UserKey;
+    private String date;
 
-    public Transaction(String source, double amount, int userKey) {
+    public Transaction(String source, double amount, int userKey, String date) {
         this.source = source;
         this.amount = amount;
+        this.date = date;
         UserKey = userKey;
     }
 
@@ -52,5 +54,13 @@ public class Transaction {
 
     public void setUserKey(int userKey) {
         UserKey = userKey;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

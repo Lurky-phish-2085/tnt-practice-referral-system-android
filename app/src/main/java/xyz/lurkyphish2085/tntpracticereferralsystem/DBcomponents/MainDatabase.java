@@ -49,7 +49,7 @@ public abstract class MainDatabase extends RoomDatabase {
             User usr = new User("Admin", "Admin");
             usr.setId(1);
             usrDao.insert(usr);
-            transactionDao.insert(new Transaction("Initial funds", 9000, 1));
+            transactionDao.insert(new Transaction("Initial funds", 9000, 1, "Jan/1/1970"));
             referenceKeyDao.insert(new ReferenceKey("DokitoMVP", 1));
             return null;
         }
