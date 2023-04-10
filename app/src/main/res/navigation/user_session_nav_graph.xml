@@ -22,6 +22,7 @@
         <action
             android:id="@+id/action_inputFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment"
-            app:launchSingleTop="false" />
+            app:launchSingleTop="false"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

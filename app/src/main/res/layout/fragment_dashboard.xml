@@ -15,5 +15,12 @@
         android:textSize="50dp"
         android:text="500"/>
 
+    <Button
+        android:id="@+id/goto_input_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="GOTO INPUT"/>
+
 
 </LinearLayout>

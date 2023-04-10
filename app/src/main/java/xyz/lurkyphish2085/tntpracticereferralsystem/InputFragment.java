@@ -2,13 +2,21 @@ package xyz.lurkyphish2085.tntpracticereferralsystem;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-public class InputFragment extends Fragment {
+public class InputFragment extends Fragment implements View.OnClickListener {
+
+    NavController navController;
+    Button addAmountBtn;
 
     public InputFragment() {
         // Required empty public constructor
@@ -19,5 +27,22 @@ public class InputFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_input, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        navController = NavHostFragment.findNavController(this);
+        addAmountBtn = view.findViewById(R.id.add_amount_btn);
+        addAmountBtn.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+        if (id == addAmountBtn.getId()) {
+            // ToDo: Logic to add amount to user
+            navController.navigate(R.id.action_inputFragment_to_dashboardFragment);
+        }
     }
 }

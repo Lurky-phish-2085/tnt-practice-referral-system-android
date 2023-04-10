@@ -1,5 +1,6 @@
 package xyz.lurkyphish2085.tntpracticereferralsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,7 +18,7 @@ import android.widget.Button;
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
     NavController navController;
-    Button gotoRegister;
+    Button loginBtn, gotoRegister;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -36,11 +37,18 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         navController = NavHostFragment.findNavController(this);
         gotoRegister = view.findViewById(R.id.goto_register_btn);
         gotoRegister.setOnClickListener(this);
+        loginBtn = view.findViewById(R.id.login_btn);
+        loginBtn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         int id = view.getId();
+        if (id == loginBtn.getId()) {
+            // ToDo: Logic for validating user before moving to UserSession Activity
+            Intent intent = new Intent(getActivity(), UserSessionActivity.class);
+            startActivity(intent);
+        }
         if (id == gotoRegister.getId()) {
             navController.navigate(R.id.action_loginFragment_to_registerFragment);
         }
