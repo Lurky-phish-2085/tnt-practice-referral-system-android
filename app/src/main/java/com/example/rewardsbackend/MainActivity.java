@@ -13,6 +13,8 @@ import com.example.rewardsbackend.DBcomponents.User;
 
 import java.util.List;
 
+import xyz.lurkyphish2085.tntpracticereferralsystem.R;
+
 public class MainActivity extends AppCompatActivity {
 
     MainViewModel mvm;
